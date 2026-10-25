@@ -1,0 +1,121 @@
+<
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TU REPUESTO</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="encabezado">
+            <h1>🔧 TU REPUESTO</h1>
+            <p>Encuentra el repuesto que necesitas</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- BUSCADOR -->
+        <section class="contenedor">
+
+            <h2>Buscar repuestos</h2>
+
+            <form id="formBusqueda">
+
+                <label for="repuesto">Nombre del repuesto</label>
+                <input
+                    type="text"
+                    id="repuesto"
+                    placeholder="Ej: filtro de aceite"
+                >
+
+                <label for="tipo">Tipo de vehículo</label>
+                <select id="tipo">
+                    <option value="">Todos</option>
+                    <option value="Moto">Motocicleta</option>
+                    <option value="Carro">Automóvil</option>
+                </select>
+
+                <label for="marca">Marca</label>
+                <select id="marca">
+                    <option value="">Todas las marcas</option>
+                </select>
+
+                <label for="modelo">Modelo</label>
+                <input
+                    type="text"
+                    id="modelo"
+                    placeholder="Ej: V-Strom 650"
+                >
+
+                <label for="anio">Año</label>
+                <input
+                    type="number"
+                    id="anio"
+                    min="1950"
+                    max="2035"
+                    placeholder="Ej: 2012"
+                >
+
+                <label for="vin">Código VIN (opcional)</label>
+                <input
+                    type="text"
+                    id="vin"
+                    maxlength="17"
+                    placeholder="Número de identificación"
+                >
+
+                <button type="submit" class="btnBuscar">
+                    🔍 Buscar repuestos
+                </button>
+
+                <button type="reset" class="btnLimpiar">
+                    Limpiar filtros
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- RESULTADOS -->
+        <section class="contenedor">
+
+            <h2>Repuestos disponibles</h2>
+
+            <p id="contador" aria-live="polite"></p>
+
+            <div id="resultados" class="resultados">
+                <!-- JavaScript mostrará los repuestos -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- VENTANA DE DETALLES -->
+    <dialog id="ventanaDetalle">
+
+        <div id="contenidoDetalle"></div>
+
+        <button id="cerrarDetalle" class="btnCerrar">
+            Cerrar
+        </button>
+
+    </dialog>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>TU REPUESTO</p>
+        <p>Encuentra, compara y contacta proveedores.</p>
+            </footer>
+
+</body>
+</html>

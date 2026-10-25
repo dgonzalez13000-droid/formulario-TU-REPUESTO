@@ -1,0 +1,224 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #263445;
+    line-height: 1.5;
+}
+
+/* ENCABEZADO */
+
+header {
+    background: #123b78;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    width: 450px;
+    margin: 25px auto; 20 px
+    border radius: 15px;
+    box-shadow: 0 4px 12px rgba)(0,0,0,0.12=)
+    
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 0 0 5px 0;
+}
+
+header p {
+    font-size: 13px;
+    margin:0;
+}
+
+/* CONTENEDORES */
+
+main {
+    max-width: 850px;
+    margin: auto;
+    padding: 15px;
+}
+
+.contenedor {
+    background: white;
+    margin: 20px 0;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+h2 {
+    color: #123b78;
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+/* FORMULARIO */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd5e0;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #3978c6;
+}
+
+/* BOTONES */
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnBuscar {
+    background: #f5b82e;
+    color: #172554;
+    margin-top: 12px;
+}
+
+.btnBuscar:hover {
+    background: #e5a619;
+}
+
+.btnLimpiar {
+    background: #e8edf5;
+    color: #123b78;
+}
+
+/* RESULTADOS */
+
+#contador {
+    margin-bottom: 15px;
+    color: #667085;
+    font-size: 14px;
+}
+
+.resultados {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.tarjeta {
+    border: 1px solid #e1e6ed;
+    border-radius: 12px;
+    padding: 16px;
+    background: #fff;
+}
+
+.tarjeta h3 {
+    color: #123b78;
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.precio {
+    color: #087443;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.btnDetalle {
+    width: 100%;
+    background: #123b78;
+    color: white;
+    margin-top: 10px;
+}
+
+.btnDetalle:hover {
+    background: #2458a0;
+}
+
+/* VENTANA DE DETALLES */
+
+dialog {
+    width: calc(100% - 30px);
+    max-width: 480px;
+    max-height: 85vh;
+    overflow-y: auto;
+    margin: auto;
+    padding: 25px;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px #00000040;
+}
+
+dialog::backdrop {
+    background: #00000090;
+}
+
+dialog h2 {
+    margin-bottom: 12px;
+}
+
+dialog p {
+    margin-bottom: 10px;
+}
+
+dialog a {
+    color: #123b78;
+    overflow-wrap: anywhere;
+}
+
+.btnCerrar {
+    background: #123b78;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: #123b78;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    font-size: 13px;
+}
+
+/* ADAPTACIÓN PARA PANTALLAS GRANDES */
+
+@media (min-width: 650px) {
+
+    .resultados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+}
